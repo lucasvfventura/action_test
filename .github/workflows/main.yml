@@ -10,7 +10,6 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: TriPSs/conventional-changelog-action@v3
         with:
-          repo_token: "${{ secrets.TOKEN }}"
-          automatic_release_tag: latest
+          github-token: ${{ secrets.github_token }}
