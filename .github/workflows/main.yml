@@ -8,5 +8,8 @@ on:
 jobs:
   release:
     name: Release
+    runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+          uses: actions/checkout@v3
       - uses: softprops/action-gh-release@v0.1.15
