@@ -1,2 +1,11 @@
-- name: GH Release
-  uses: softprops/action-gh-release@v0.1.15
+name: "Auto Release"
+
+on: 
+  push:
+    branches:
+      - "main"
+
+jobs:
+  release:
+    name: "Release"
+    uses: "softprops/action-gh-release@v0.1.15"
